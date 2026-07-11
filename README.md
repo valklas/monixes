@@ -9,15 +9,18 @@ monixes/
 ├── flake.nix
 ├── LICENSE
 ├── modules
-│   ├── home-manager
-│   │   └── default.nix
-│   └── nixos
-│       ├── default.nix
-│       ├── hostname.nix
-│       └── user.nix
+│   ├── home-manager
+│   │   └── default.nix
+│   └── nixos
+│       ├── default.nix
+│       ├── hostname.nix
+│       ├── networking
+│       │   ├── default.nix
+│       │   └── networkmanager.nix
+│       └── user.nix
 └── README.md
 
-4 directories, 7 files
+5 directories, 9 files
 ```
 
 ## License
