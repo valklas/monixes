@@ -1,9 +1,9 @@
 { config, lib, pkgs, ... }:
 
 let
-cfg = config.monixes.user;
+cfg = config.monixes.system.user;
 in {
-    options.monixes.user = {
+    options.monixes.system.user = {
         enable = lib.mkEnableOption "Monixes user account management";
 
         name = lib.mkOption {
