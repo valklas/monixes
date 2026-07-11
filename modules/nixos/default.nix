@@ -2,6 +2,7 @@
 
 {
     imports = [
+        ./networking
         ./hostname.nix
         ./user.nix
     ];
