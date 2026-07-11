@@ -3,7 +3,7 @@
 let
 cfg = config.monixes.host;
 in {
-    options.monixes.host = {
+    options.monixes.system.host = {
         enable = lib.mkEnableOption "Monixes hostname management";
 
         name = lib.mkOption {
