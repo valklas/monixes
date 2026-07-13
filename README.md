@@ -16,12 +16,13 @@ monixes/
 │       ├── hostname.nix
 │       ├── networking
 │       │   ├── default.nix
+│       │   ├── firewall.nix
 │       │   └── networkmanager.nix
 │       ├── nix.nix
 │       └── user.nix
 └── README.md
 
-5 directories, 10 files
+5 directories, 11 files
 ```
 
 ## License
