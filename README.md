@@ -14,6 +14,9 @@ monixes/
 │   └── nixos
 │       ├── boot.nix
 │       ├── default.nix
+│       ├── desktop
+│       │   ├── default.nix
+│       │   └── display-manager.nix
 │       ├── hardware
 │       │   ├── audio.nix
 │       │   ├── bluetooth.nix
@@ -28,7 +31,7 @@ monixes/
 │       └── user.nix
 └── README.md
 
-6 directories, 16 files
+7 directories, 18 files
 ```
 
 ## License
