@@ -29,7 +29,7 @@ in {
             enable = true;
             alsa.enable = true;
             alsa.support32Bit = true; # Critical for 32-bit games/Steam
-                pulse.enable = true;
+            pulse.enable = true;
             jack.enable = cfg.supportJack;
         };
     };
