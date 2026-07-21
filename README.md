@@ -13,6 +13,9 @@ monixes/
 │   │   └── default.nix
 │   └── nixos
 │       ├── default.nix
+│       ├── hardware
+│       │   ├── audio.nix
+│       │   └── default.nix
 │       ├── hostname.nix
 │       ├── networking
 │       │   ├── default.nix
@@ -22,7 +25,7 @@ monixes/
 │       └── user.nix
 └── README.md
 
-5 directories, 11 files
+6 directories, 13 files
 ```
 
 ## License
