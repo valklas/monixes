@@ -16,7 +16,8 @@ monixes/
 │       ├── hardware
 │       │   ├── audio.nix
 │       │   ├── bluetooth.nix
-│       │   └── default.nix
+│       │   ├── default.nix
+│       │   └── graphics.nix
 │       ├── hostname.nix
 │       ├── networking
 │       │   ├── default.nix
@@ -26,7 +27,7 @@ monixes/
 │       └── user.nix
 └── README.md
 
-6 directories, 14 files
+6 directories, 15 files
 ```
 
 ## License
