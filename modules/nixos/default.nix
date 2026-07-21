@@ -2,6 +2,7 @@
 
 {
     imports = [
+        ./hardware
         ./networking
         ./hostname.nix
         ./nix.nix
