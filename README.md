@@ -12,6 +12,7 @@ monixes/
 │   ├── home-manager
 │   │   └── default.nix
 │   └── nixos
+│       ├── boot.nix
 │       ├── default.nix
 │       ├── hardware
 │       │   ├── audio.nix
@@ -27,7 +28,7 @@ monixes/
 │       └── user.nix
 └── README.md
 
-6 directories, 15 files
+6 directories, 16 files
 ```
 
 ## License
