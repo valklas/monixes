@@ -2,6 +2,7 @@
 
 {
     imports = [
+        ./desktop
         ./hardware
         ./networking
         ./boot.nix
