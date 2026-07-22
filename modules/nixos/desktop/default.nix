@@ -3,6 +3,6 @@
 {
     imports = [
         ./DE
-        ./display-manager.nix
+        ./DM
     ];
 }
