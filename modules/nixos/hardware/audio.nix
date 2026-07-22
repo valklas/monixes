@@ -19,7 +19,7 @@ in {
 
     config = lib.mkIf cfg.enable {
         # Disable legacy PulseAudio driver to prevent conflicts
-        hardware.pulseaudio.enable = false;
+        services.pulseaudio.enable = false;
 
         # Enable RealtimeKit for high-priority audio processing
         security.rtkit.enable = true;
