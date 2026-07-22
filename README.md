@@ -15,6 +15,9 @@ monixes/
 │       ├── boot.nix
 │       ├── default.nix
 │       ├── desktop
+│       │   ├── DE
+│       │   │   ├── default.nix
+│       │   │   └── plasma.nix
 │       │   ├── default.nix
 │       │   └── display-manager.nix
 │       ├── hardware
@@ -31,7 +34,7 @@ monixes/
 │       └── user.nix
 └── README.md
 
-7 directories, 18 files
+8 directories, 20 files
 ```
 
 ## License
