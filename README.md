@@ -19,7 +19,10 @@ monixes/
 │       │   │   ├── default.nix
 │       │   │   └── plasma.nix
 │       │   ├── default.nix
-│       │   └── display-manager.nix
+│       │   └── DM
+│       │       ├── default.nix
+│       │       ├── greetd-tuigreet.nix
+│       │       └── sddm.nix
 │       ├── hardware
 │       │   ├── audio.nix
 │       │   ├── bluetooth.nix
@@ -34,7 +37,7 @@ monixes/
 │       └── user.nix
 └── README.md
 
-8 directories, 20 files
+9 directories, 22 files
 ```
 
 ## License
