@@ -11,7 +11,7 @@ in {
         };
     };
 
-    config = lib.mkIf cfg.enable {
+    config = lib.mkIf cfg.limine.enable {
         boot.loader.limine.enable = true;
         boot.loader.efi.canTouchEfiVariables = true;
     };
