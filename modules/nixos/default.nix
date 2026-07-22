@@ -5,7 +5,7 @@
         ./desktop
         ./hardware
         ./networking
-        ./boot.nix
+        ./boot
         ./hostname.nix
         ./nix.nix
         ./user.nix
