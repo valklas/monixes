@@ -1,17 +1,9 @@
 { config, lib, ... }:
 
 let
-cfg = config.monixes.system.desktop.DM.sddm;
+cfg = config.monixes.system.desktop.DM;
 in {
-    options.monixes.system.desktop.DM.sddm = {
-        enable = lib.mkOption {
-            type = lib.types.bool;
-            default = false;
-            description = "Enable SDDM display manager.";
-        };
-    };
-
-    config = lib.mkIf cfg.enable {
+    config = lib.mkIf (cfg.displayManager == "sddm") {
         services.displayManager.sddm = {
             enable = lib.mkDefault true;
             wayland.enable = lib.mkDefault true;
