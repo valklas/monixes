@@ -1,8 +1,6 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 
-let
-cfg = config.monixes.system.boot;
-in {
+{
     imports = [
         ./limine.nix
         ./systemd-boot.nix
@@ -27,6 +25,12 @@ in {
                 type = lib.types.str;
                 default = "nodev";
                 description = "The device on which to install GRUB. Set to 'nodev' for EFI.";
+            };
+
+            efiSupport = lib.mkOption {
+                type = lib.types.bool;
+                default = true;
+                description = "Whether to enable EFI support in GRUB.";
             };
 
             useOSProber = lib.mkOption {
