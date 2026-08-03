@@ -2,13 +2,6 @@
 
 let
 cfg = config.monixes.system.desktop.DM.greetd-tuigreet;
-# Map friendly names to actual commands
-cmd = if cfg.environment == "plasma-wayland" then
-        "startplasma-wayland"
-      else if cfg.environment == "plasma-x11" then
-        "startplasma-x11"
-      else
-        cfg.environment;
 in {
     options.monixes.system.desktop.DM.greetd-tuigreet = {
         enable = lib.mkOption {
@@ -20,19 +13,28 @@ in {
         environment = lib.mkOption {
             type = lib.types.str;
             default = "bash";
-            description = "The target user environment name or custom startup command (e.g. start-hyprland,).";
+            description = "The target user environment name or custom startup command (e.g. start-hyprland).";
         };
     };
 
-    config = lib.mkIf cfg.enable {
-        services.greetd = {
-            enable = true;
-            settings = {
-                default_session = {
-                    command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd ${cmd}";
-                    user = "greeter";
+    config = lib.mkIf cfg.enable (
+        let
+            cmd = if cfg.environment == "plasma-wayland" then
+                    "startplasma-wayland"
+                  else if cfg.environment == "plasma-x11" then
+                    "startplasma-x11"
+                  else
+                    cfg.environment;
+        in {
+            services.greetd = {
+                enable = true;
+                settings = {
+                    default_session = {
+                        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd ${cmd}";
+                        user = "greeter";
+                    };
                 };
             };
-        };
-    };
+        }
+    );
 }
