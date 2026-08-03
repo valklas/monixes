@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 
 let
 cfg = config.monixes.system.boot;
@@ -8,7 +8,7 @@ in {
             enable = true;
             device = cfg.grub.device;
             useOSProber = cfg.grub.useOSProber;
-            efiSupport = cfg.canTouchEfiVariables;
+            efiSupport = cfg.grub.efiSupport;
         };
         boot.loader.efi.canTouchEfiVariables = cfg.canTouchEfiVariables;
     };
