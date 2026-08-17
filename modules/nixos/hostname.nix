@@ -8,7 +8,7 @@ in {
 
         name = lib.mkOption {
             type = lib.types.str;
-            default = "nixos";
+            default = "monixes";
             description = "The target hostname for this machine configuration.";
         };
     };
