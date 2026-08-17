@@ -20,11 +20,20 @@
 
         kernelParams = lib.mkOption {
             type = lib.types.listOf lib.types.str;
-            default = [ ];
+            default = [ "quiet" "splash" ];
             description = "Additional kernel parameters to pass at boot.";
             example = [ "quiet" "splash" ];
         };
+
+        plymouth.enable = lib.mkOption {
+            type = lib.types.bool;
+            default = true;
+            description = "Enable the Plymouth graphical boot splash screen.";
+        };
     };
 
-    config.boot.kernelParams = lib.mkAfter config.monixes.system.boot.kernelParams;
+    config = {
+        boot.kernelParams = lib.mkAfter config.monixes.system.boot.kernelParams;
+        boot.plymouth.enable = config.monixes.system.boot.plymouth.enable;
+    };
 }
