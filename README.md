@@ -10,7 +10,8 @@ monixes/
 ├── LICENSE
 ├── modules
 │   ├── home-manager
-│   │   └── default.nix
+│   │   ├── default.nix
+│   │   └── theme.nix
 │   └── nixos
 │       ├── boot
 │       │   ├── default.nix
@@ -32,10 +33,11 @@ monixes/
 │       │   ├── firewall.nix
 │       │   └── networkmanager.nix
 │       ├── nix.nix
+│       ├── theme.nix
 │       └── user.nix
 └── README.md
 
-9 directories, 20 files
+9 directories, 22 files
 ```
 
 ## License
