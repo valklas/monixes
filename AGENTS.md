@@ -33,8 +33,14 @@ ambiguous. Ask a focused clarification question instead.
 During implementation:
 
 - Prefer the smallest change that satisfies the request.
+- Put each independently configurable feature or integration in its own
+  module file; use `default.nix` files primarily as import and composition
+  entry points.
 - Whenever a file or directory is added or removed, update the README's
   `Project Architecture` tree and file count in the same commit.
+- Do not restructure, rewrite, or add feature documentation to the README;
+  architecture updates are the only README changes agents should make unless
+  the user explicitly requests otherwise.
 - Preserve existing public option names and behavior unless a breaking change
   is explicitly requested.
 - Keep related modules, imports, option declarations, and README architecture
