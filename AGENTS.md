@@ -33,6 +33,8 @@ ambiguous. Ask a focused clarification question instead.
 During implementation:
 
 - Prefer the smallest change that satisfies the request.
+- Whenever a file or directory is added or removed, update the README's
+  `Project Architecture` tree and file count in the same commit.
 - Preserve existing public option names and behavior unless a breaking change
   is explicitly requested.
 - Keep related modules, imports, option declarations, and README architecture

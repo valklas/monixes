@@ -6,6 +6,7 @@ A lightweight, unified configuration wrapper for NixOS and Home Manager. See the
 
 ```
 monixes/
+├── AGENTS.md
 ├── flake.nix
 ├── LICENSE
 ├── modules
@@ -37,7 +38,7 @@ monixes/
 │       └── user.nix
 └── README.md
 
-9 directories, 22 files
+9 directories, 23 files
 ```
 
 ## License
