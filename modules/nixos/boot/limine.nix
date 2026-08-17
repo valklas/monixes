@@ -1,12 +1,18 @@
 { config, lib, ... }:
 
 let
-cfg = config.monixes.system.boot;
+    cfg = config.monixes.system.boot;
 in {
-    config = lib.mkIf (cfg.loader == "limine") {
+    options.monixes.system.boot.canTouchEfiVariables = lib.mkOption {
+        type = lib.types.bool;
+        default = true;
+        description = "Allow modification of EFI variables.";
+    };
+
+    config = {
         boot.loader.limine = {
             enable = true;
-            style.interface.branding = "Monixes Bootloader";
+            style.interface.branding = lib.mkDefault "Monixes Bootloader";
         };
         boot.loader.efi.canTouchEfiVariables = cfg.canTouchEfiVariables;
     };

@@ -16,7 +16,9 @@ monixes/
 │   └── nixos
 │       ├── boot
 │       │   ├── default.nix
-│       │   └── limine.nix
+│       │   ├── kernel-params.nix
+│       │   ├── limine.nix
+│       │   └── plymouth.nix
 │       ├── default.nix
 │       ├── desktop
 │       │   ├── default.nix
@@ -38,7 +40,7 @@ monixes/
 │       └── user.nix
 └── README.md
 
-9 directories, 23 files
+9 directories, 25 files
 ```
 
 ## License
