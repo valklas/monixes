@@ -1,14 +1,13 @@
-{ config, lib, ... }:
+{ lib, ... }:
 
 {
     imports = [
         ./greetd-tuigreet.nix
-        ./sddm.nix
     ];
 
     options.monixes.system.desktop.DM = {
         displayManager = lib.mkOption {
-            type = lib.types.enum [ "none" "greetd-tuigreet" "sddm" ];
+            type = lib.types.enum [ "none" "greetd-tuigreet" ];
             default = "none";
             description = "The display manager to enable.";
         };

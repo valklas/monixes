@@ -12,17 +12,15 @@ monixes/
 │   ├── home-manager
 │   │   └── default.nix
 │   └── nixos
-│       ├── boot.nix
+│       ├── boot
+│       │   ├── default.nix
+│       │   └── limine.nix
 │       ├── default.nix
 │       ├── desktop
-│       │   ├── DE
-│       │   │   ├── default.nix
-│       │   │   └── plasma.nix
 │       │   ├── default.nix
 │       │   └── DM
 │       │       ├── default.nix
-│       │       ├── greetd-tuigreet.nix
-│       │       └── sddm.nix
+│       │       └── greetd-tuigreet.nix
 │       ├── hardware
 │       │   ├── audio.nix
 │       │   ├── bluetooth.nix
@@ -37,7 +35,7 @@ monixes/
 │       └── user.nix
 └── README.md
 
-9 directories, 22 files
+9 directories, 17 files
 ```
 
 ## License
